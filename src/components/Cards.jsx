@@ -22,10 +22,10 @@ function Cards({ children }) {
             <Card style={{ width: '400px', backgroundColor: 'rgba(255, 0, 0, 0)', border: '1px solid red' }} className='m-5'>
                 <Card.Img variant="top" id='imgCard' src={imgCards} />
                 <Card.Body>
-                    <Card.Title style={{ color: 'lightgray' }}>{children}</Card.Title>
-                    <Card.Text style={{ color: "lightgray", fontSize: 15 }}>
+                    <Card.Title style={{ color: 'red', }}><b>{children}</b></Card.Title>
+                    <Card.Text style={{ color: "grey", fontSize: 15 }}><b>
                         Push the button for open the {children} page
-                    </Card.Text>
+                        </b></Card.Text>
                     <Button variant="outline-danger">Open page</Button>
                 </Card.Body>
             </Card>
