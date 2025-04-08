@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Title from './components/Title';
+import Cards from './components/Cards';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Title>Music_project</Title>
+      <div className='raw d-flex justify-content-center mt-1'>
+        <Cards>Rock</Cards>
+        <Cards>Pop</Cards>
+      </div>
+      <div className='raw d-flex justify-content-center mt-1'>
+        <Cards>Rap</Cards>
+        <Cards>Electronic</Cards>
+      </div>
+    </>
   );
 }
 
