@@ -6,18 +6,18 @@ import Cards from './components/Cards';
 function App() {
   return (
     <>
-      <Title>Music_project</Title>
-      <div className='raw d-flex justify-content-center mt-1'>
-        <Cards>Rock</Cards>
-        <Cards>Pop</Cards>
-      </div>
-      <div className='raw d-flex justify-content-center mt-1'>
-        <Cards>Rap</Cards>
-        <Cards>Electronic</Cards>
-      </div>
-      <div className='raw d-flex justify-content-center mt-1'>
-        <Cards>Jazz</Cards>
-        <Cards>Reggae</Cards>
+      <div className='container'>
+        <Title>Music_project</Title>
+        <div className='row d-flex justify-content-center'>
+          <Cards>Rock</Cards>
+          <Cards>Pop</Cards>
+          <Cards>Jazz</Cards>
+        </div>
+        <div className='row d-flex justify-content-center'>
+          <Cards>Rap</Cards>
+          <Cards>Electronic</Cards>
+          <Cards>Reggae</Cards>
+        </div>
       </div>
     </>
   );

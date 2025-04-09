@@ -11,9 +11,9 @@ function cardsImage(callback) {
         return '/img_rap.jpg'
     } else if (callback === 'Electronic') {
         return '/img_electronic.png'
-    } else if (callback === 'Jazz'){
+    } else if (callback === 'Jazz') {
         return '/img_jazz.png'
-    } else if (callback === 'Reggae'){
+    } else if (callback === 'Reggae') {
         return '/img_reggae.png'
     }
 }
@@ -22,18 +22,20 @@ function cardsImage(callback) {
 function Cards({ children }) {
     const imgCards = cardsImage(children)
     return (
-        <div className='lg-col-4 md-col-8 lg-col-12 mt-1 mb-2 d-flex justify-content-between'>
-            <Card style={{ width: '400px', backgroundColor: 'rgba(255, 0, 0, 0)', border: '1px solid red' }} className='m-5'>
-                <Card.Img variant="top" id='imgCard' src={imgCards} />
-                <Card.Body>
-                    <Card.Title style={{ color: 'red', }}><b>{children}</b></Card.Title>
-                    <Card.Text style={{ color: "grey", fontSize: 15 }}><b>
-                        Push the button for open the {children} page
+        <>
+            <div className='col-12 col-md-6 col-lg-4'>
+                <Card style={{ maxWidth: '300px', backgroundColor: 'rgba(255, 0, 0, 0)', border: '1px solid red' }} className='m-5'>
+                    <Card.Img variant="top" id='imgCard' src={imgCards} />
+                    <Card.Body>
+                        <Card.Title style={{ color: 'red', }}><b>{children}</b></Card.Title>
+                        <Card.Text style={{ color: "grey", fontSize: 15 }}><b>
+                            Push the button for open the {children} page
                         </b></Card.Text>
-                    <Button variant="outline-danger">Open page</Button>
-                </Card.Body>
-            </Card>
-        </div>
+                        <Button variant="outline-danger">Open page</Button>
+                    </Card.Body>
+                </Card>
+            </div>
+        </>
     );
 }
 
