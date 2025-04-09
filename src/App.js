@@ -15,6 +15,10 @@ function App() {
         <Cards>Rap</Cards>
         <Cards>Electronic</Cards>
       </div>
+      <div className='raw d-flex justify-content-center mt-1'>
+        <Cards>Jazz</Cards>
+        <Cards>Reggae</Cards>
+      </div>
     </>
   );
 }

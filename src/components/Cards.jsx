@@ -3,14 +3,18 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function cardsImage(callback) {
-    if (callback == 'Rock') {
+    if (callback === 'Rock') {
         return '/img_rock.png'
-    } else if (callback == 'Pop') {
+    } else if (callback === 'Pop') {
         return '/img_pop.png'
-    } else if (callback == 'Rap') {
+    } else if (callback === 'Rap') {
         return '/img_rap.jpg'
-    } else {
+    } else if (callback === 'Electronic') {
         return '/img_electronic.png'
+    } else if (callback === 'Jazz'){
+        return '/img_jazz.png'
+    } else if (callback === 'Reggae'){
+        return '/img_reggae.png'
     }
 }
 
