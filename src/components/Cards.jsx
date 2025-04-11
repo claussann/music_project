@@ -2,41 +2,48 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function cardsImage(callback) {
-    if (callback === 'Rock') {
-        return '/img_rock.png'
-    } else if (callback === 'Pop') {
-        return '/img_pop.png'
-    } else if (callback === 'Rap') {
-        return '/img_rap.jpg'
-    } else if (callback === 'Electronic') {
-        return '/img_electronic.png'
-    } else if (callback === 'Jazz') {
-        return '/img_jazz.png'
-    } else if (callback === 'Reggae') {
-        return '/img_reggae.png'
+const musicType = [
+    {
+        genere: "Rock",
+        img: 'img_rock.png'
+    },
+    {
+        genere: "Pop",
+        img: 'img_pop.png'
+    },
+    {
+        genere: "Reggae",
+        img: 'img_reggae.png'
+    },
+    {
+        genere: "Jazz",
+        img: 'img_jazz.png'
+    },
+    {
+        genere: "Rap",
+        img: 'img_rap.jpg'
+    },
+    {
+        genere: "Electronic",
+        img: 'img_electronic.png'
     }
-}
+]
 
-
-function Cards({ children }) {
-    const imgCards = cardsImage(children)
-    return (
-        <>
-            <div className='col-12 col-md-6 col-lg-4'>
-                <Card style={{ maxWidth: '300px', backgroundColor: 'rgba(255, 0, 0, 0)', border: '1px solid red' }} className='m-5'>
-                    <Card.Img variant="top" id='imgCard' src={imgCards} />
-                    <Card.Body>
-                        <Card.Title style={{ color: 'red', }}><b>{children}</b></Card.Title>
-                        <Card.Text style={{ color: "grey", fontSize: 15 }}><b>
-                            Push the button for open the {children} page
-                        </b></Card.Text>
-                        <Button variant="outline-danger">Open page</Button>
-                    </Card.Body>
-                </Card>
-            </div>
-        </>
+function Cards() {
+    const generi = musicType.map(genere => (
+        <Card style={{ maxWidth: '250px', backgroundColor: 'rgba(255, 0, 0, 0)', border: '1px solid red' }} className='m-5'>
+            <Card.Img variant="top" id='imgCard' src={genere.img} />
+            <Card.Body>
+                <Card.Title style={{ color: 'red', }}><b>{genere.genere}</b></Card.Title>
+                <Card.Text style={{ color: "grey", fontSize: 15 }}><b>
+                    Push the button for open the {genere.genere} page
+                </b></Card.Text>
+                <Button variant="outline-danger">Open page</Button>
+            </Card.Body>
+        </Card>
+    )
     );
+    return <div className='row'>{generi}</div>
 }
 
 export default Cards
