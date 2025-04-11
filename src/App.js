@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <div className='container'>
-        <Typography title>Music_project</Typography>
-        <Cards />
+          <Typography title>Music_project</Typography>
+          <Cards />
       </div>
     </>
   );

@@ -43,7 +43,7 @@ function Cards() {
         </Card>
     )
     );
-    return <div className='row'>{generi}</div>
+    return <div className='row text-center'>{generi}</div>
 }
 
 export default Cards
