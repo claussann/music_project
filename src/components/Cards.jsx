@@ -43,7 +43,7 @@ function Cards() {
         </Card>
     )
     );
-    return <div className='row text-center'>{generi}</div>
+    return <div className='row d-flex justify-content-center text-center'>{generi}</div>
 }
 
 export default Cards
