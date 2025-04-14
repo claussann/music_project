@@ -1,16 +1,37 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Typography from './components/Typography';
-import Cards from './components/Cards';
+import Input from './components/Input';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home';
+import Rock from './Pages/Rock';
+import Pop from './Pages/Pop';
+import Reggae from './Pages/Reggae'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={
       <div className='container'>
-          <Typography title>Music_project</Typography>
-          <Cards />
-      </div>
-    </>
+        <div className='row d-flex justify-content-center'>
+          <div className='col-12 w-25 mt-5'>
+            <Typography title>Login</Typography>
+          </div>
+        </div>
+        <div className='row d-flex justify-content-center'>
+          <div className='col-12 md-col-6 lg-col-9 w-50 mb-2'>
+            <Input />
+          </div>
+        </div>
+      </div> 
+      } />
+      <Route path="/home" element={<Home />}/>
+      <Route path="/rock" element={<Rock />}/>
+      <Route path="/pop" element={<Pop />}/>
+      <Route path="/reggae" element={<Reggae />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
