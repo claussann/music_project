@@ -1,12 +1,15 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Typography from './components/Typography';
 import Input from './components/Input';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import Rock from './Pages/Rock';
 import Pop from './Pages/Pop';
 import Reggae from './Pages/Reggae'
+import Jazz from './Pages/Jazz';
+
+import './App.css';
 
 function App() {
   return (
@@ -30,6 +33,7 @@ function App() {
       <Route path="/rock" element={<Rock />}/>
       <Route path="/pop" element={<Pop />}/>
       <Route path="/reggae" element={<Reggae />}/>
+      <Route path="/jazz" element={<Jazz />}/>
       </Routes>
     </BrowserRouter>
   );

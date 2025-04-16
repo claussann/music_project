@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Button from './Bottone'
+import Loading from './Loading'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -10,6 +11,8 @@ function Input() {
     
     const [user, setUser] = useState("")
     const [pass, setPass] = useState("")
+    const [showModal,setShowModal] = useState(false)
+    const navigate = useNavigate()
     
     const handleUserChange = (event) => {
         setUser(event.target.value)
@@ -17,11 +20,13 @@ function Input() {
     const handlePassChange = (event) => {
         setPass(event.target.value)
     }
-    const navigate = useNavigate()
 
     const logIn = () => {
     if (user === "user" && pass === "password") {
-        navigate('/Home')
+         setShowModal(true)
+         setTimeout(() => {
+            navigate('/Home')
+         },5000)
     } else {
         alert('utente e pass errati')
     }
@@ -49,6 +54,7 @@ function Input() {
             <div className='col-12 d-flex justify-content-center'>
             <Button onClick={logIn}>Invia</Button>
             </div>
+            {showModal && <Loading/>}
         </>
     )
 }
