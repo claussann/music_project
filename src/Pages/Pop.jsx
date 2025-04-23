@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Typography from '../components/Typography';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Bottone';
+import InputPage from '../components/InputPage';
 
 const paragrafi = [
     `La musica pop, abbreviazione di "popular music", è un genere nato a metà del XX secolo, pensato per raggiungere un vasto pubblico attraverso melodie orecchiabili, ritmi semplici e testi immediati. È caratterizzata da una struttura delle canzoni facilmente riconoscibile (strofa, ritornello, bridge) e dall’uso di sonorità accattivanti che si prestano alla trasmissione radiofonica e alla diffusione nei media.`,
@@ -30,6 +31,7 @@ function Pop() {
                     <img className='img-fluid' src="/img_musica_pop.png" alt="" />
                 </div>
             </div>
+            <InputPage musicType={'Pop'} />
             <div className='row'>
                 <Button onClick={backToHome}>Torna alla home</Button>
             </div>

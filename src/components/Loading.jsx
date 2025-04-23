@@ -5,31 +5,31 @@ import Modal from 'react-bootstrap/Modal';
 
 function Loading({ musicType, emoji, gif }) {
     const [show, setShow] = useState(true)
-    let [count, setCount] = useState(0)
+    let [count, setCount] = useState(5)
 
     useEffect(() => {
         const loadingInterval = setInterval(() => {
-            setCount((count) => count + 1 )
+            setCount((count) => count - 1)
         }, 1000);
         return () => clearInterval(loadingInterval)
     }, [])
     useEffect(() => {
-        if (count === 5) {
+        if (count === 0) {
             setShow(false)
         }
-    },[count])
+    }, [count])
 
     return (
         <div
             className="modal show"
-            style={{ display: 'block', position: 'initial'}}
+            style={{ display: 'block', position: 'initial' }}
         >
-            <Modal show={show} onHide={()=>setShow(false)}>
-                <Modal.Header  style={ {backgroundColor: 'black', color:'red'} } > 
-                    <Modal.Title>{count}</Modal.Title>
+            <Modal show={show} onHide={() => setShow(false)}>
+                <Modal.Header style={{ backgroundColor: 'black', color: 'red' }} >
+                    <Modal.Title>{count}...</Modal.Title>
                 </Modal.Header>
-                <Modal.Body  style={ { backgroundColor: 'black', color:'red'} } >Loading...Sorry, we are building this {musicType} page! Rock on! {emoji}</Modal.Body>
-                <Modal.Footer  style={  {backgroundColor: 'black', color:'red'} } >
+                <Modal.Body style={{ backgroundColor: 'black', color: 'red' }} >Loading...Sorry, we are building this {musicType} page! Rock on! {emoji}</Modal.Body>
+                <Modal.Footer style={{ backgroundColor: 'black', color: 'red' }} >
                     <Spinner animation="border" variant="danger" />
                 </Modal.Footer>
             </Modal>

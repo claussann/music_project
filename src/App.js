@@ -8,6 +8,8 @@ import Rock from './Pages/Rock';
 import Pop from './Pages/Pop';
 import Reggae from './Pages/Reggae'
 import Jazz from './Pages/Jazz';
+import Electronic from './Pages/Electronic';
+import Rap from './Pages/Rap';
 
 import './App.css';
 
@@ -34,6 +36,8 @@ function App() {
       <Route path="/pop" element={<Pop />}/>
       <Route path="/reggae" element={<Reggae />}/>
       <Route path="/jazz" element={<Jazz />}/>
+      <Route path="/electronic" element={<Electronic />}/>
+      <Route path="/rap" element={<Rap />}/>
       </Routes>
     </BrowserRouter>
   );

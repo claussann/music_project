@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Typography from '../components/Typography';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Bottone';
+import InputPage from '../components/InputPage';
 
 const paragrafi = [
     `La musica reggae nasce in Giamaica alla fine degli anni '60, evolvendosi da generi come lo ska e il rocksteady. Caratterizzata da un ritmo lento e cadenzato, in levare, si distingue per l’uso del basso potente, la chitarra sincopata e l’accompagnamento costante della batteria. Il reggae è profondamente legato alla cultura giamaicana e alla spiritualità Rastafariana, che ne ha influenzato sia i testi che l’estetica.`,
@@ -29,6 +30,7 @@ function Reggae() {
                     <img className='img-fluid' src="/img_musica_reggae.png" alt="img" />
                 </div>
             </div>
+            <InputPage musicType={'Reggae'} />
             <div className='row'>
                 <Button onClick={backToHome}>Torna alla home</Button>
             </div>

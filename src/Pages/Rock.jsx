@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Typography from '../components/Typography';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Bottone';
+import InputPage from '../components/InputPage';
 
 const paragrafi = [
     `La musica rock è un genere nato negli Stati Uniti alla fine degli anni '40 e sviluppatosi nei decenni successivi. 
@@ -19,17 +20,18 @@ function Rock() {
             <div className='row'>
                 <Typography title>ROCK_PAGE</Typography>
                 <div className='row'>
-                <Typography paragraph>🎸 LA MUSICA ROCK </Typography>
+                    <Typography paragraph>🎸 LA MUSICA ROCK </Typography>
                 </div>
                 <div className='col-8'>
-                <Typography paragraph>{paragrafi[0]}</Typography>
-                <Typography paragraph>{paragrafi[1]}</Typography>
-                <Typography paragraph>{paragrafi[2]}</Typography>
+                    <Typography paragraph>{paragrafi[0]}</Typography>
+                    <Typography paragraph>{paragrafi[1]}</Typography>
+                    <Typography paragraph>{paragrafi[2]}</Typography>
                 </div>
                 <div className='col-4'>
                     <img className='img-fluid' src="/img_musica_rock.png" alt="" />
                 </div>
             </div>
+            <InputPage musicType={'Rock'}/>
             <div className='row'>
                 <Button onClick={backToHome}>Torna alla home</Button>
             </div>

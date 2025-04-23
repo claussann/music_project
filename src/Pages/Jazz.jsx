@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Typography from '../components/Typography';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Bottone';
+import InputPage from '../components/InputPage';
 
 const paragrafi = [
     `La musica jazz nasce all'inizio del Novecento negli Stati Uniti, principalmente a New Orleans, dall'incontro tra le tradizioni musicali afroamericane, il blues, il gospel e la musica europea. È una forma d'espressione profondamente legata alla storia e all'identità della comunità nera americana, che ha trasformato il dolore, la gioia e la resistenza in arte. Il jazz, fin dalle sue origini, è stato sinonimo di libertà: libertà di improvvisare, di sperimentare, di uscire dagli schemi.`,
@@ -30,6 +31,7 @@ function Jazz() {
                     <img className='img-fluid' src="/img_musica_jazz.png" alt="" />
                 </div>
             </div>
+            <InputPage musicType={'Jazz'} />
             <div className='row'>
                 <Button onClick={backToHome}>Torna alla home</Button>
             </div>

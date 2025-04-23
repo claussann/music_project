@@ -69,6 +69,20 @@ function Cards() {
             setTimeout(() => {
                 navigate('/Jazz')
             }, 5000)
+        } else if (musicStyle === "Electronic"){
+            modalMusicType = "Electronic"
+            emoji = "⚡🎵"
+            setShowModal(true)
+            setTimeout(() => {
+                navigate('/Electronic')
+            }, 5000)
+        }else if (musicStyle === "Rap"){
+            modalMusicType = "Rap"
+            emoji = "🎧🎵"
+            setShowModal(true)
+            setTimeout(() => {
+                navigate('/Rap')
+            }, 5000)
         }
     }
     const generi = musicType.map(genere => (
