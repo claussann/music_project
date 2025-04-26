@@ -97,10 +97,10 @@ function Cards() {
                     <Button variant="outline-danger" onClick={() => goTo(genere.genere)}>Open page</Button>
                 </Card.Body>
             </Card>
-            {showModal && <Loading children={`Loading...Sorry, we are building this ${musicType} page! Rock on! ${emoji}`} musicType={modalMusicType} emoji={emoji} />}
+            {showModal && <Loading children={`Loading...Sorry, we are building this ${modalMusicType} page! Rock on! ${emoji}`} musicType={modalMusicType} emoji={emoji} />}
         </>
     )
-    );
+);
     return <div className='row d-flex justify-content-center text-center'>{generi}</div>
 }
 

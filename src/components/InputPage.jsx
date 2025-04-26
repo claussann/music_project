@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 import Button from "./Bottone";
 import Loading from "./Loading"
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './InputPage.css'
-import { useState } from "react";
 
 
 function InputPage({ musicType }) {
@@ -34,9 +35,13 @@ function InputPage({ musicType }) {
     }
     
     const storageDelete = () => {
-        localStorage.removeItem(`${musicType}`)
+        const deletedGroups = localStorage.getItem(`${musicType}`)
         setShowModal(true)
         setList([])
+        localStorage.removeItem(`${musicType}`)
+        if(!deletedGroups){
+            alert('localStorage is Empty')
+        }
     }
 
     return (
