@@ -97,7 +97,7 @@ function Cards() {
                     <Button variant="outline-danger" onClick={() => goTo(genere.genere)}>Open page</Button>
                 </Card.Body>
             </Card>
-            {showModal && <Loading musicType={modalMusicType} emoji={emoji} />}
+            {showModal && <Loading children={`Loading...Sorry, we are building this ${musicType} page! Rock on! ${emoji}`} musicType={modalMusicType} emoji={emoji} />}
         </>
     )
     );

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import Modal from 'react-bootstrap/Modal';
 
-function Loading({ musicType, emoji, gif }) {
+function Loading({ musicType, emoji, children, gif }) {
     const [show, setShow] = useState(true)
     let [count, setCount] = useState(5)
 
@@ -28,7 +28,7 @@ function Loading({ musicType, emoji, gif }) {
                 <Modal.Header style={{ backgroundColor: 'black', color: 'red' }} >
                     <Modal.Title>{count}...</Modal.Title>
                 </Modal.Header>
-                <Modal.Body style={{ backgroundColor: 'black', color: 'red' }} >Loading...Sorry, we are building this {musicType} page! Rock on! {emoji}</Modal.Body>
+                <Modal.Body style={{ backgroundColor: 'black', color: 'red' }} >{children}</Modal.Body>
                 <Modal.Footer style={{ backgroundColor: 'black', color: 'red' }} >
                     <Spinner animation="border" variant="danger" />
                 </Modal.Footer>

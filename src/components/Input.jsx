@@ -54,7 +54,7 @@ function Input() {
             <div className='col-12 d-flex justify-content-center'>
             <Button onClick={logIn}>Invia</Button>
             </div>
-            {showModal && <Loading/>}
+            {showModal && <Loading children={`wait...we are building this page`}/>}
         </>
     )
 }
