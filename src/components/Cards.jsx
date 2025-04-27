@@ -11,27 +11,50 @@ import './Cards.css'
 const musicType = [
     {
         genere: "Rock",
-        img: 'img_rock.png'
+        img: 'img_rock.png',
+        modalMusicType: "Rock",
+        emoji: "🤘🏼🎸",
+        navigateTo: "/Rock"
     },
     {
         genere: "Pop",
-        img: 'img_pop.png'
+        img: 'img_pop.png',
+        modalMusicType: "Pop",
+        emoji: "🎤🎶",
+        navigateTo: "/Pop"
+
     },
     {
         genere: "Reggae",
-        img: 'img_reggae.png'
+        img: 'img_reggae.png',
+        modalMusicType: "Reggae",
+        emoji: "🌴🌿",
+        navigateTo: "/Reggae"
+
     },
     {
         genere: "Jazz",
-        img: 'img_jazz.png'
+        img: 'img_jazz.png',
+        modalMusicType: "Jazz",
+        emoji: "🎷✨",
+        navigateTo: "/Jazz"
+
     },
     {
         genere: "Rap",
-        img: 'img_rap.jpg'
+        img: 'img_rap.jpg',
+        modalMusicType: "Rap",
+        emoji: "🎧🎵",
+        navigateTo: "/Rap"
+
     },
     {
         genere: "Electronic",
-        img: 'img_electronic.png'
+        img: 'img_electronic.png',
+        modalMusicType: "Electronic",
+        emoji: "⚡🎵",
+        navigateTo: "/Electronic"
+
     }
 ]
 let modalMusicType;
@@ -40,50 +63,13 @@ let emoji;
 function Cards() {
     const [showModal, setShowModal] = useState(false)
     const navigate = useNavigate()
-    const goTo = (musicStyle) => {
-        if (musicStyle === "Rock") {
-            modalMusicType = "Rock"
-            emoji = "🤘🏼🎸"
-            setShowModal(true)
-            setTimeout(() => {
-                navigate('/Rock')
-            }, 5000)
-        } else if (musicStyle === "Pop") {
-            modalMusicType = "Pop"
-            emoji = "🎤🎶"
-            setShowModal(true)
-            setTimeout(() => {
-                navigate('/Pop')
-            }, 5000)
-        } else if (musicStyle === "Reggae") {
-            modalMusicType = "Reggae"
-            emoji = "🌴🌿"
-            setShowModal(true)
-            setTimeout(() => {
-                navigate('/Reggae')
-            }, 5000)
-        } else if (musicStyle === "Jazz") {
-            modalMusicType = "Jazz"
-            emoji = "🎷✨"
-            setShowModal(true)
-            setTimeout(() => {
-                navigate('/Jazz')
-            }, 5000)
-        } else if (musicStyle === "Electronic"){
-            modalMusicType = "Electronic"
-            emoji = "⚡🎵"
-            setShowModal(true)
-            setTimeout(() => {
-                navigate('/Electronic')
-            }, 5000)
-        }else if (musicStyle === "Rap"){
-            modalMusicType = "Rap"
-            emoji = "🎧🎵"
-            setShowModal(true)
-            setTimeout(() => {
-                navigate('/Rap')
-            }, 5000)
-        }
+    const goTo = (genere) => {
+        modalMusicType = genere.modalMusicType
+        emoji = emoji.emoji
+        setShowModal(true)
+        setTimeout(() => {
+            navigate(genere.navigateTo)
+        }, 5000)
     }
     const generi = musicType.map(genere => (
         <>
@@ -94,13 +80,13 @@ function Cards() {
                     <Card.Text style={{ color: "grey", fontSize: 15 }}><b>
                         Push the button for open the page
                     </b></Card.Text>
-                    <Button variant="outline-danger" onClick={() => goTo(genere.genere)}>Open page</Button>
+                    <Button variant="outline-danger" onClick={() => goTo(genere)}>Open page</Button>
                 </Card.Body>
             </Card>
             {showModal && <Loading children={`Loading...Sorry, we are building this ${modalMusicType} page! Rock on! ${emoji}`} musicType={modalMusicType} emoji={emoji} />}
         </>
     )
-);
+    );
     return <div className='row d-flex justify-content-center text-center'>{generi}</div>
 }
 
