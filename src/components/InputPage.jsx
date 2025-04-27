@@ -20,12 +20,12 @@ function InputPage({ musicType }) {
     }
 
     const save = () => {
-        localStorage.setItem(`${musicType}`, JSON.stringify(list))
+        localStorage.setItem(musicType, JSON.stringify(list))
         alert(`salvato nel local storage con key ${musicType}`)
     }
 
     const load = () => {
-        const loadedGroup = JSON.parse(localStorage.getItem(`${musicType}`))
+        const loadedGroup = JSON.parse(localStorage.getItem(musicType))
         if (Array.isArray(loadedGroup)) {
             alert(`${musicType} groups are loaded...`)
             setList(loadedGroup)
@@ -35,10 +35,10 @@ function InputPage({ musicType }) {
     }
     
     const storageDelete = () => {
-        const deletedGroups = localStorage.getItem(`${musicType}`)
+        const deletedGroups = localStorage.getItem(musicType)
         setShowModal(true)
         setList([])
-        localStorage.removeItem(`${musicType}`)
+        localStorage.removeItem(musicType)
         if(!deletedGroups){
             alert('localStorage is Empty')
         }

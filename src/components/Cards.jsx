@@ -65,7 +65,7 @@ function Cards() {
     const navigate = useNavigate()
     const goTo = (genere) => {
         modalMusicType = genere.modalMusicType
-        emoji = emoji.emoji
+        emoji = genere.emoji
         setShowModal(true)
         setTimeout(() => {
             navigate(genere.navigateTo)
