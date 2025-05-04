@@ -6,7 +6,6 @@ import Loading from "./Loading"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './InputPage.css'
 
-
 function InputPage({ musicType }) {
     const [groupList, setGroupList] = useState('')
     const [list, setList] = useState([])
