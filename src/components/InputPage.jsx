@@ -35,12 +35,13 @@ function InputPage({ musicType }) {
     
     const storageDelete = () => {
         const deletedGroups = localStorage.getItem(musicType)
+        if(!deletedGroups){
+            alert('localStorage is Empty')
+            return
+        }
         setShowModal(true)
         setList([])
         localStorage.removeItem(musicType)
-        if(!deletedGroups){
-            alert('localStorage is Empty')
-        }
     }
 
     return (
