@@ -32,7 +32,7 @@ function Input() {
     }
     }
     return (
-        <>
+        <div className='container col-12'>
             <form>
                 <div className='form-group p-1 border border-danger mb-2 p-2' id="form">
                     <label style={{color:'lightgray'}} htmlFor="userName">Username: </label>
@@ -55,7 +55,7 @@ function Input() {
             <Button onClick={logIn}>Invia</Button>
             </div>
             {showModal && <Loading children={`wait...we are building this page`}/>}
-        </>
+        </div>
     )
 }
 

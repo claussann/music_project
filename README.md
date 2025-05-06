@@ -99,7 +99,7 @@ Programmazione funzionale
 
 
 🌐 Live Demo
-https://music-protfolio-project.netlify.app/
+https://music-portfolio-project.netlify.app/
 
 📂 GitHub Repository
 https://github.com/claussann/music_project

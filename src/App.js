@@ -25,7 +25,7 @@ function App() {
           </div>
         </div>
         <div className='row d-flex justify-content-center'>
-          <div className='col-12 md-col-6 lg-col-9 w-50 mb-2'>
+          <div className='col-12 md-col-8 lg-col-10 mb-2'>
             <Input />
           </div>
         </div>
