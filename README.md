@@ -46,6 +46,8 @@ localStorage
 
 Functional Programming
 
+React-bootstrap
+
 
 // ITALIAN
 
@@ -96,6 +98,8 @@ HTML/CSS
 localStorage
 
 Programmazione funzionale
+
+React-bootstrap
 
 
 🌐 Live Demo
